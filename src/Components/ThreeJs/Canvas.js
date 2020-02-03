@@ -11,6 +11,7 @@ import Swarm from './3DComponents/Swarm';
 import About from './3DComponents/About';
 import Skills from './3DComponents/Skills';
 import Work from './3DComponents/Work';
+import Model from './3DComponents/Scene';
 
 function Title({ position }) {
     const { size } = useThree()
@@ -79,7 +80,7 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
             <Suspense fallback={<Dom position={[0, -10, 0]} center className="loading">
                 loading...
             </Dom>}>
-                <SpaceShip />
+                <Model />
                 <ambientLight intensity={1.1} />
                 <pointLight position={[100, 100, 100]} intensity={1} color="white" />
                 <pointLight position={[-100, -100, -100]} intensity={5} color="black" />
