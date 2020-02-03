@@ -85,6 +85,8 @@ export const tileDataMonsterHunters = [
     },
 ];
 
+
+
 export const projectsCards = [
     {
         id: 1,

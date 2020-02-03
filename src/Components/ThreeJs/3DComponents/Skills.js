@@ -19,7 +19,7 @@ function Skills({ top, mouse, pos }) {
         if (mobile) {
             return -30
         } else if (tablet) {
-            return 0
+            return 11
         } else {
             return 11
         }
@@ -37,7 +37,7 @@ function Skills({ top, mouse, pos }) {
         if (mobile) {
             return 0
         } else if (tablet) {
-            return -30
+            return -50
         } else {
             return -50
         }

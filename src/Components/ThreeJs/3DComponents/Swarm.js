@@ -62,9 +62,9 @@ function Swarm({ count, mouse, top }) {
     return (
         <>
             <a.group ref={group} position={top.interpolate(top => [mobile ? 0 : 20, 1 + top / 22, 0])}>
-                <a.instancedMesh frustumCulled={false} ref={mesh} args={[null, null, count]}>
+                <a.instancedMesh frustumCulled={false} ref={mesh} args={[null, null, 5]}>
                     <boxBufferGeometry attach="geometry" args={[5, 1, 1]} >
-                        <instancedBufferAttribute attachObject={['attributes', 'color']} args={[colorArray, 3]} />
+                        <instancedBufferAttribute attachObject={['attributes', 'color']} args={[colorArray, count]} />
                     </boxBufferGeometry>
                     <meshPhongMaterial attach="material" vertexColors={THREE.VertexColors} />
                 </a.instancedMesh>

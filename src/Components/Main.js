@@ -5,6 +5,8 @@ import { useSpring, a } from 'react-spring';
 import ContactComponent from './Segments/ContactComponent';
 import WorkComponent from './Segments/WorkComponent';
 import FooterComponent from './Segments/components/FooterComponent';
+import AboutComponent from './Segments/AboutComponent';
+import SkillsComponent from './Segments/SkillsComponent';
 
 const Main = () => {
     const AnimatedGrid = a(Grid)
@@ -15,6 +17,12 @@ const Main = () => {
 
     return (
         <AnimatedGrid container direction='row' justify="center" style={props} spacing={6}>
+            <Grid item xs={12}>
+                <AboutComponent />
+            </Grid>
+            <Grid item xs={12}>
+                <SkillsComponent />
+            </Grid>
             <WorkComponent />
             <Grid item xs={12}>
                 <ContactComponent />

@@ -35,7 +35,7 @@ const TitleComponent = () => {
                 <Typography variant="h1" style={{ fontFamily: "Montserrat", fontWeight: "900", fontStyle: "italic", fontSize: small ? "40px" : "70px", color: "#333333" }}>THOMAS GERTENBACH</Typography>
             </Grid>
             <Grid item>
-                <Paper elevation={0} square={true} style={{ maxWidth: "600px", padding: "1em", paddingBottom: "2em", backgroundColor: "rgba(255,255,255)" }}>
+                <Paper elevation={0} square={true} style={{ maxWidth: "600px", padding: "1em", paddingBottom: "2em", backgroundColor: "rgba(255,255,255,0)" }}>
                     <Typography
                         variant="h5"
                         style={{ fontFamily: "Montserrat", fontWeight: "600", color: "#616161", lineHeight: "2.2em" }}>

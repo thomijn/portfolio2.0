@@ -1,7 +1,8 @@
-import React, { useRef, Suspense } from 'react';
+import React, { useRef, Suspense, useState, useEffect } from 'react';
 import '../App.css';
 import * as THREE from 'three'
-import { Canvas, useFrame, useThree, Dom } from 'react-three-fiber'
+import { Canvas, useFrame, useThree, Dom, } from 'react-three-fiber'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { a } from 'react-spring/three'
 
 import Effects from './Effects'
@@ -49,9 +50,23 @@ function Dolly({ y, top }) {
     return null
 }
 
+const SpaceShip = () => {
+    const [model, setModel] = useState()
+
+    useEffect(() => {
+        new GLTFLoader().load("/scene.gltf", setModel)
+    })
+    return model ?
+        <mesh rotation={[0, -0.5, 0]} position={[0, -5, 50]}>
+            <primitive object={model.scene} />
+        </mesh>
+        : null
+}
+
 const CanvasComponent = ({ mouse, top, mouseText }) => {
     return (
         <Canvas
+            pixelRatio={window.devicePixelRatio}
             concurrent
             className="canvas"
             gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
@@ -64,15 +79,12 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
             <Suspense fallback={<Dom position={[0, -10, 0]} center className="loading">
                 loading...
             </Dom>}>
+                <SpaceShip />
                 <ambientLight intensity={1.1} />
                 <pointLight position={[100, 100, 100]} intensity={1} color="white" />
                 <pointLight position={[-100, -100, -100]} intensity={5} color="black" />
                 <Content top={top} position={top.interpolate(top => [0, 60 + top / -100, -20])} />
                 <Title mouse={mouseText} top={top} position={top.interpolate(top => [0, 1 + top / 35, 38])} />
-                <About top={top} mouse={mouse} />
-                <Skills top={top} mouse={mouse} />
-                <Work top={top} mouse={mouse} />
-                <Swarm mouse={mouseText} top={top} count={75} />}
                 <Suspense fallback={null}>
                     <Effects />
                 </Suspense>
