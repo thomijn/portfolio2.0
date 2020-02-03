@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900i&display=swap');
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+body {
+  will-change: transform;
+}
+
+.canvas > div {
+  z-index: 1;
+}
+
+body {
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
+}
+
+.scroll-container {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+ overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.project-container {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+
+}
+
+li {
+  padding: 10px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: small;
+}
+
+.loading {
+  padding: 10px;
+  transform: translate3d(-50%, -50%, 0);
+}
