@@ -30,13 +30,13 @@ const useStyles = makeStyles((theme) => createStyles({
   }
 }))
 
-function App({ top }) {
+function App() {
   const classes = useStyles()
   return (
     <div className={classes.app}>
       <Grid container justify="center" >
         <Grid item xs={8}>
-          <Main top={top} />
+          <Main />
         </Grid>
       </Grid>
     </div >

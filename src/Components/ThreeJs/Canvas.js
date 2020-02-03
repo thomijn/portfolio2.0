@@ -52,6 +52,7 @@ function Dolly({ y, top }) {
 const CanvasComponent = ({ mouse, top, mouseText }) => {
     return (
         <Canvas
+            concurrent
             className="canvas"
             gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
             camera={{ fov: 75, position: [5, 0, 60] }}
@@ -71,7 +72,7 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
                 <About top={top} mouse={mouse} />
                 <Skills top={top} mouse={mouse} />
                 <Work top={top} mouse={mouse} />
-                <Swarm mouse={mouseText} top={top} count={150} />}
+                <Swarm mouse={mouseText} top={top} count={75} />}
                 <Suspense fallback={null}>
                     <Effects />
                 </Suspense>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Grid, Paper, Typography, useTheme, useMediaQuery } from '@material-ui/core'
 import { useTransition, a, config } from 'react-spring'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faJs, faGithubSquare, faNodeJs } from '@fortawesome/free-brands-svg-icons'
 
 const icons = [
-    { id: 0, name: 'fab fa-react', title: "React" },
-    { id: 1, name: 'fab fa-node-js', title: "NodeJs" },
-    { id: 2, name: 'fab fa-js', title: "Javascript ES6" },
-    { id: 3, name: 'fab fa-git-alt', title: "Git" },
+    { id: 0, name: faReact, title: "React" },
+    { id: 1, name: faJs, title: "NodeJs" },
+    { id: 2, name: faNodeJs, title: "Javascript ES6" },
+    { id: 3, name: faGithubSquare, title: "Git" },
 ]
 
 const TitleComponent = () => {
@@ -45,7 +47,7 @@ const TitleComponent = () => {
                         user interfaces, <br />
                         using
                         {transitions.map(({ item, key, props }) =>
-                            <a.span key={key} style={props}><i className={item.name} style={{ fontSize: "40px", color: "#333333" }} />  {item.title}</a.span>
+                            <a.span key={key} style={props}><FontAwesomeIcon icon={item.name} style={{ fontSize: "40px", color: "#333333" }} />  {item.title}</a.span>
                         )}
                     </Typography>
                 </Paper>

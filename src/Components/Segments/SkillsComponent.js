@@ -1,5 +1,7 @@
 import React from 'react'
 import { Grid, Paper, Typography, useTheme, useMediaQuery } from '@material-ui/core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 const SkillsComponent = () => {
     const theme = useTheme()
@@ -29,23 +31,23 @@ const SkillsComponent = () => {
                             <Grid container>
                                 <Grid item xs={12} sm={6} md={4} lg={4}>
                                     <ul className="fa-ul" >
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />HTML5</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />CSS3</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Javascript ES6</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />HTML5</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />CSS3</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Javascript ES6</li>
                                     </ul>
                                 </Grid>
                                 <Grid item xs={12} sm={6} md={4} lg={4}>
                                     <ul className="fa-ul">
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />React</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />React-native</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Redux</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />React</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />React-native</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Redux</li>
                                     </ul>
                                 </Grid>
                                 <Grid item xs={12} sm={6} md={4} lg={4}>
                                     <ul className="fa-ul">
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />NodeJs</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Typescript</li>
-                                        <li><span className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />MongoDB</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />NodeJs</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />Typescript</li>
+                                        <li><FontAwesomeIcon icon={faCode} className="fas fa-brackets-curly fa-lg" style={{ marginRight: "10px", color: "#494c7a" }} />MongoDB</li>
                                     </ul>
                                 </Grid>
                             </Grid>

@@ -2,5 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './Routes.js';
 
-ReactDOM.render(<Routes />, document.getElementById('root'));
+const rootEl = document.getElementById('root')
+const root = ReactDOM.createRoot(rootEl)
+root.render(<Routes />)
 
