@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.45de9dc4.chunk.css",
-    "main.js": "/static/js/main.47e47ce8.chunk.js",
-    "main.js.map": "/static/js/main.47e47ce8.chunk.js.map",
+    "main.css": "/static/css/main.8a3f554d.chunk.css",
+    "main.js": "/static/js/main.4c8ac526.chunk.js",
+    "main.js.map": "/static/js/main.4c8ac526.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b77ea1c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.b77ea1c6.js.map",
-    "static/js/2.ebea70aa.chunk.js": "/static/js/2.ebea70aa.chunk.js",
-    "static/js/2.ebea70aa.chunk.js.map": "/static/js/2.ebea70aa.chunk.js.map",
+    "static/js/2.91a0bea7.chunk.js": "/static/js/2.91a0bea7.chunk.js",
+    "static/js/2.91a0bea7.chunk.js.map": "/static/js/2.91a0bea7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.7f4252cdd56f2e2d55c990231307a5fb.js": "/precache-manifest.7f4252cdd56f2e2d55c990231307a5fb.js",
+    "precache-manifest.ed3c7a3f9eaeba8d8e5afcc67d87b35a.js": "/precache-manifest.ed3c7a3f9eaeba8d8e5afcc67d87b35a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.45de9dc4.chunk.css.map": "/static/css/main.45de9dc4.chunk.css.map",
-    "static/js/2.ebea70aa.chunk.js.LICENSE": "/static/js/2.ebea70aa.chunk.js.LICENSE",
+    "static/css/main.8a3f554d.chunk.css.map": "/static/css/main.8a3f554d.chunk.css.map",
+    "static/js/2.91a0bea7.chunk.js.LICENSE": "/static/js/2.91a0bea7.chunk.js.LICENSE",
     "static/media/coding.jpg": "/static/media/coding.2d742dff.jpg",
     "static/media/fotografiegertenbach.png": "/static/media/fotografiegertenbach.54076551.png",
     "static/media/fotografiegertenbach1.png": "/static/media/fotografiegertenbach1.cbde7088.png",
@@ -24,15 +24,15 @@
     "static/media/klasbak2.png": "/static/media/klasbak2.28b853ea.png",
     "static/media/klasbak3.png": "/static/media/klasbak3.e80a5afe.png",
     "static/media/klasbak4.png": "/static/media/klasbak4.e449618f.png",
-    "static/media/me2.jpg": "/static/media/me2.fec935f0.jpg",
+    "static/media/me2.jpg": "/static/media/me2.481fb1d0.jpg",
     "static/media/monsterhunters.png": "/static/media/monsterhunters.28c12dd0.png",
     "static/media/monsterhunters2.png": "/static/media/monsterhunters2.b1bd497b.png",
     "static/media/monsterhunters3.png": "/static/media/monsterhunters3.a7d4ced0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b77ea1c6.js",
-    "static/js/2.ebea70aa.chunk.js",
-    "static/css/main.45de9dc4.chunk.css",
-    "static/js/main.47e47ce8.chunk.js"
+    "static/js/2.91a0bea7.chunk.js",
+    "static/css/main.8a3f554d.chunk.css",
+    "static/js/main.4c8ac526.chunk.js"
   ]
 }

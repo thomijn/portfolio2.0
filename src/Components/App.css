@@ -68,6 +68,25 @@ li {
 }
 
 .loading {
-  padding: 10px;
-  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loading-bar-container {
+  width: 200px;
+  height: 3px;
+  background: #dbdbdb;
+}
+
+.loading-bar {
+  height: 5px;
+  background: #494c7a;
 }

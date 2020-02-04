@@ -9,7 +9,7 @@ import TitleComponent from '../Segments/TitleComponent';
 import Model from './Scene';
 import Work from './3DComponents/Work';
 import Phone from './Contact';
-
+import Loading from './Loading';
 
 function Title({ position }) {
     const { size } = useThree()
@@ -51,42 +51,45 @@ function Dolly({ y, top }) {
 
 const CanvasComponent = ({ mouse, top, mouseText }) => {
     return (
-        <Canvas
-            pixelRatio={window.devicePixelRatio}
-            concurrent
-            className="canvas"
-            gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
-            camera={{ fov: 75, position: [5, 0, 60] }}
-            onCreated={({ gl }) => {
-                gl.setClearColor('white')
-                gl.toneMapping = THREE.ACESFilmicToneMapping
-                gl.outputEncoding = THREE.LinearEncoding
-            }}>
-            <Suspense fallback={<Dom position={[0, -10, 0]} center className="loading">
-                loading...
-            </Dom>}>
-                <Suspense fallback={<Dom>Loading...</Dom>}>
+        <>
+            <Canvas
+                pixelRatio={window.devicePixelRatio}
+                concurrent
+                className="canvas"
+                gl={{ alpha: false, antialias: false, logarithmicDepthBuffer: true }}
+                camera={{ fov: 75, position: [5, 0, 60] }}
+                onCreated={({ gl }) => {
+                    gl.setClearColor('white')
+                    gl.toneMapping = THREE.ACESFilmicToneMapping
+                    gl.outputEncoding = THREE.LinearEncoding
+                }}>
+                <Suspense fallback={
+                    <Dom position={[0, 0, 0]} center className="loading">
+
+                    </Dom>
+                }>
                     <group position={[5, -3, 60]}>
                         <Model position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
                     </group>
-                </Suspense>
-                <Suspense fallback={null}>
+
                     <group position={[300, -300, 0]}>
                         <Phone top={top} />
                     </group>
+
+                    <ambientLight intensity={1.1} />
+                    <pointLight position={[100, 100, 100]} intensity={1} color="white" />
+                    <pointLight position={[-100, -100, -100]} intensity={5} color="white" />
+                    <Content top={top} position={top.interpolate(top => [0, 60 + top / -100, -20])} />
+                    <Title mouse={mouseText} top={top} position={top.interpolate(top => [0, 1 + top / 35, 38])} />
+                    <Work top={top} />
+                    <Suspense fallback={null}>
+                        <Effects />
+                    </Suspense>
+                    <Dolly top={top} />
                 </Suspense>
-                <ambientLight intensity={1.1} />
-                <pointLight position={[100, 100, 100]} intensity={1} color="white" />
-                <pointLight position={[-100, -100, -100]} intensity={5} color="white" />
-                <Content top={top} position={top.interpolate(top => [0, 60 + top / -100, -20])} />
-                <Title mouse={mouseText} top={top} position={top.interpolate(top => [0, 1 + top / 35, 38])} />
-                <Work top={top} />
-                <Suspense fallback={null}>
-                    <Effects />
-                </Suspense>
-                <Dolly top={top} />
-            </Suspense>
-        </Canvas>
+            </Canvas >
+            <Loading />
+        </>
     )
 }
 
