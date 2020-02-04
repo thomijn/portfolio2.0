@@ -7,6 +7,8 @@ import { a } from 'react-spring/three'
 
 import Effects from './Effects'
 import TitleComponent from '../Segments/TitleComponent';
+import Model from './Scene';
+import Work from './3DComponents/Work';
 
 
 function Title({ position }) {
@@ -64,15 +66,16 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
                 loading...
             </Dom>}>
                 <Suspense fallback={<Dom>Loading...</Dom>}>
-                    <group position={[10, -10, 50]}>
-
+                    <group position={[5, -3, 60]}>
+                        <Model position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
                     </group>
                 </Suspense>
                 <ambientLight intensity={1.1} />
-                <pointLight position={[100, 100, 100]} intensity={1} color="black" />
-                <pointLight position={[-100, -100, -100]} intensity={5} color="black" />
+                <pointLight position={[100, 100, 100]} intensity={1} color="white" />
+                <pointLight position={[-100, -100, -100]} intensity={5} color="white" />
                 <Content top={top} position={top.interpolate(top => [0, 60 + top / -100, -20])} />
                 <Title mouse={mouseText} top={top} position={top.interpolate(top => [0, 1 + top / 35, 38])} />
+                <Work top={top} />
                 <Suspense fallback={null}>
                     <Effects />
                 </Suspense>

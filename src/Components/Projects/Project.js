@@ -37,7 +37,7 @@ const Project = ({ project }) => {
     })
 
     return (
-        <Grid container justify="center" spacing={8}>
+        <Grid container justify="center">
             <Grid item xs={10} md={8}>
                 <Grid container spacing={8} >
                     <Grid style={{ marginTop: "4em" }} item xs={12}>
