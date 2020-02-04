@@ -8,6 +8,7 @@ import Effects from './Effects'
 import TitleComponent from '../Segments/TitleComponent';
 import Model from './Scene';
 import Work from './3DComponents/Work';
+import Phone from './Contact';
 
 
 function Title({ position }) {
@@ -67,6 +68,11 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
                 <Suspense fallback={<Dom>Loading...</Dom>}>
                     <group position={[5, -3, 60]}>
                         <Model position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
+                    </group>
+                </Suspense>
+                <Suspense fallback={null}>
+                    <group position={[300, -300, 0]}>
+                        <Phone top={top} />
                     </group>
                 </Suspense>
                 <ambientLight intensity={1.1} />

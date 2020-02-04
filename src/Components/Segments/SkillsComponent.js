@@ -59,7 +59,7 @@ const SkillsComponent = () => {
                     </Grid>
                 </Grid>
                 <Grid item sm={12} md={6}>
-                    <img src={code} width="100%" height="auto" />
+                    <img alt="coding" src={code} width="100%" height="auto" />
                 </Grid>
             </Grid>
         </div >

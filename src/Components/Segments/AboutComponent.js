@@ -9,7 +9,7 @@ const AboutComponent = () => {
 
             <Grid container alignItems="center" justify={small ? "center" : "flex-start"} spacing={8} >
                 <Grid item sm={12} md={6}>
-                    <img src={me} width="100%" height="auto" />
+                    <img src={me} width="100%" height="auto" alt="Thomas" />
                 </Grid>
                 <Grid item sm={12} md={6}>
                     <Grid container direction="column" spacing={6}>
