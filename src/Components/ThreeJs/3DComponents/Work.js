@@ -20,6 +20,14 @@ function Work({ top, mouse }) {
     })
     return (
         <a.group position={top.interpolate(top => [0, mobile ? -160 + top / 50 : -110 + top / 50, 40])}>
+            <a.mesh ref={ref1} position={top.interpolate(top => [50 + top / -80, 60 + top / 600, 5])}>
+                <boxBufferGeometry attach="geometry" args={[7, 1, 2]} />
+                <meshPhongMaterial attach="material" color="#2a2b45" />
+            </a.mesh>
+            <a.mesh ref={ref1} position={top.interpolate(top => [-50 + top / 80, 80, 5])}>
+                <boxBufferGeometry attach="geometry" args={[7, 1, 2]} />
+                <meshPhongMaterial attach="material" color="#2a2b45" />
+            </a.mesh>
             <a.mesh ref={ref1} position={top.interpolate(top => [-50 + top / 80, 25, 5])}>
                 <boxBufferGeometry attach="geometry" args={[7, 1, 2]} />
                 <meshPhongMaterial attach="material" color="#2a2b45" />

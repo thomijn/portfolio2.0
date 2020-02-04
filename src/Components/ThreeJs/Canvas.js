@@ -1,8 +1,7 @@
-import React, { useRef, Suspense, useState, useEffect } from 'react';
+import React, { useRef, Suspense } from 'react';
 import '../App.css';
 import * as THREE from 'three'
 import { Canvas, useFrame, useThree, Dom, } from 'react-three-fiber'
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { a } from 'react-spring/three'
 
 import Effects from './Effects'
@@ -33,7 +32,7 @@ function Content({ position, top }) {
     return (
         <a.mesh rotation={[0, 0, 0.3]} position={position}>
             <planeBufferGeometry attach="geometry" args={[400, 100]} />
-            <meshPhongMaterial attach="material" color="#fff" transparent opacity={0.3} />
+            <meshPhongMaterial attach="material" color="#9c9c9c" transparent opacity={0.1} />
         </a.mesh>
     )
 }
