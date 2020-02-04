@@ -7,11 +7,7 @@ import { a } from 'react-spring/three'
 
 import Effects from './Effects'
 import TitleComponent from '../Segments/TitleComponent';
-import Swarm from './3DComponents/Swarm';
-import About from './3DComponents/About';
-import Skills from './3DComponents/Skills';
-import Work from './3DComponents/Work';
-import Model from './3DComponents/Scene';
+
 
 function Title({ position }) {
     const { size } = useThree()
@@ -51,19 +47,6 @@ function Dolly({ y, top }) {
     return null
 }
 
-const SpaceShip = () => {
-    const [model, setModel] = useState()
-
-    useEffect(() => {
-        new GLTFLoader().load("/scene.gltf", setModel)
-    })
-    return model ?
-        <mesh rotation={[0, -0.5, 0]} position={[0, -5, 50]}>
-            <primitive object={model.scene} />
-        </mesh>
-        : null
-}
-
 const CanvasComponent = ({ mouse, top, mouseText }) => {
     return (
         <Canvas
@@ -80,9 +63,13 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
             <Suspense fallback={<Dom position={[0, -10, 0]} center className="loading">
                 loading...
             </Dom>}>
-                <Model />
+                <Suspense fallback={<Dom>Loading...</Dom>}>
+                    <group position={[10, -10, 50]}>
+
+                    </group>
+                </Suspense>
                 <ambientLight intensity={1.1} />
-                <pointLight position={[100, 100, 100]} intensity={1} color="white" />
+                <pointLight position={[100, 100, 100]} intensity={1} color="black" />
                 <pointLight position={[-100, -100, -100]} intensity={5} color="black" />
                 <Content top={top} position={top.interpolate(top => [0, 60 + top / -100, -20])} />
                 <Title mouse={mouseText} top={top} position={top.interpolate(top => [0, 1 + top / 35, 38])} />
