@@ -8,8 +8,8 @@ import Effects from './Effects'
 import TitleComponent from '../Segments/TitleComponent';
 import Model from './Scene';
 import Work from './3DComponents/Work';
-import Phone from './Contact';
 import Loading from './Loading';
+import ScrollIcon from './ScrollIcon';
 
 function Title({ position }) {
     const { size } = useThree()
@@ -49,7 +49,7 @@ function Dolly({ y, top }) {
     return null
 }
 
-const CanvasComponent = ({ mouse, top, mouseText }) => {
+const CanvasComponent = ({ top, mouseText, scrollIcon }) => {
     return (
         <>
             <Canvas
@@ -63,19 +63,10 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
                     gl.toneMapping = THREE.ACESFilmicToneMapping
                     gl.outputEncoding = THREE.LinearEncoding
                 }}>
-                <Suspense fallback={
-                    <Dom position={[0, 0, 0]} center className="loading">
-
-                    </Dom>
-                }>
+                <Suspense fallback={null}>
                     <group position={[5, -3, 60]}>
                         <Model position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
                     </group>
-
-                    <group position={[300, -300, 0]}>
-                        <Phone top={top} />
-                    </group>
-
                     <ambientLight intensity={1.1} />
                     <pointLight position={[100, 100, 100]} intensity={1} color="white" />
                     <pointLight position={[-100, -100, -100]} intensity={5} color="white" />
@@ -88,6 +79,7 @@ const CanvasComponent = ({ mouse, top, mouseText }) => {
                     <Dolly top={top} />
                 </Suspense>
             </Canvas >
+            <ScrollIcon scrollIcon={scrollIcon} />
             <Loading />
         </>
     )

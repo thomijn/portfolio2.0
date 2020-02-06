@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import * as THREE from 'three'
 import { useTransition, a, config } from 'react-spring';
-import { CircularProgress } from '@material-ui/core';
+import { useStore } from '../../store';
 
 function Loading() {
-    const [finished, set] = useState(false)
+    const { finished, setFinished } = useStore()
     const [width, setWidth] = useState(0)
     useEffect(() => {
-        THREE.DefaultLoadingManager.onLoad = () => set(true)
+        THREE.DefaultLoadingManager.onLoad = () => setFinished(true)
         THREE.DefaultLoadingManager.onProgress = (url, itemsLoaded, itemsTotal) =>
             setWidth((itemsLoaded / itemsTotal) * 200)
-    }, [])
+    }, [setFinished])
 
     const props = useTransition(finished, null, {
         from: { opacity: 1, width: 0 },

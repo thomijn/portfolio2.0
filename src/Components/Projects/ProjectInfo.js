@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 
 const ProjectInfo = ({ project }) => {
     const classes = useStyles()
-
+    console.log(project.text)
     return (
         <Grid container >
             <Grid item xs={6} sm={3} md={2}>
