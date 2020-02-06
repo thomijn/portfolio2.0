@@ -10,6 +10,7 @@ import Model from './Scene';
 import Work from './3DComponents/Work';
 import Loading from './Loading';
 import ScrollIcon from './ScrollIcon';
+import Laptop from './Laptop';
 
 function Title({ position }) {
     const { size } = useThree()
@@ -65,7 +66,7 @@ const CanvasComponent = ({ top, mouseText, scrollIcon }) => {
                 }}>
                 <Suspense fallback={null}>
                     <group position={[5, -3, 60]}>
-                        <Model position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
+                        <Laptop position={top.interpolate(top => [0, 0 + top / 150, 0])} rotation={top.interpolate(top => [0, 0 + top / 500, 0])} />
                     </group>
                     <ambientLight intensity={1.1} />
                     <pointLight position={[100, 100, 100]} intensity={1} color="white" />
