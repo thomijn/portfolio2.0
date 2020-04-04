@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 import { useSpring, a } from 'react-spring';
 
 import ContactComponent from './Segments/ContactComponent';
@@ -18,9 +18,10 @@ const Main = () => {
     return (
         <AnimatedGrid container direction='row' justify="center" style={props} spacing={6}>
             <Grid item xs={12}>
-                <AboutComponent />
+            <Button variant='contained'>okee</Button>
+                {/* <AboutComponent /> */}
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
                 <SkillsComponent />
             </Grid>
             <WorkComponent />
@@ -29,7 +30,7 @@ const Main = () => {
             </Grid>
             <Grid item xs={12}>
                 <FooterComponent />
-            </Grid>
+            </Grid> */}
         </AnimatedGrid>
     )
 }

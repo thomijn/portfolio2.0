@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => createStyles({
   app: {
     backgroundColor: "rgba(0,0,0,0)",
     position: "Absolute",
-    top: "110vh"
   }
 }))
 

@@ -5,6 +5,10 @@ export const [useStore] = create(set => ({
     setFinished: bool => {
         set({ finished: bool })
     },
+    page: 'home',
+    setPage: bool => {
+        set({ page: bool })
+    },
     selectedProject: {},
     setselectedProject: project => {
         set({ project: project })

@@ -15,8 +15,8 @@ const ScrollContainer = ({ bind, onMouseMover }) => {
         config: config.slow
     })
     return (
-        <a.div {...bind()} onMouseMove={() => onMouseMover} style={container} className="scroll-container">
-            <div style={{ height: '150vw', }} />
+        <a.div onMouseMove={() => onMouseMover} style={container} className="scroll-container">
+            {/* <div style={{ height: '150vw', }} /> */}
             <App style={{ position: "fixed" }} />
         </a.div>
     )

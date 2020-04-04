@@ -2,7 +2,6 @@ import React from 'react'
 import { useSpring, a } from 'react-spring'
 
 const ScrollIcon = ({ scrollIcon }) => {
-    console.log(scrollIcon)
     const props = useSpring({
         opacity: scrollIcon ? 1 : 0,
         transform: !scrollIcon ? "translateY(-2rem)" : "translateY(0rem)",

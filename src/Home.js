@@ -12,7 +12,6 @@ const Home = () => {
     const [scrollY, setscrollY] = useState(true)
     const [{ top }, set] = useSpring(() => ({ top: 0 }))
     const mouseText = useRef([0, 0])
-    const onMouseMover = useCallback(({ clientX: x, clientY: y }) => (mouseText.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
     const bind = useGesture({
         onScroll: ({ xy }) => {
@@ -29,7 +28,7 @@ const Home = () => {
             <Suspense fallback={<p>loading...</p>}>
                 <CanvasComponent scrollIcon={scrollY} top={top} mouseText={mouseText} />
             </Suspense>
-            <ScrollContainer bind={bind} onMouseMover={onMouseMover} />
+            {/* <ScrollContainer  /> */}
         </>
     )
 }
